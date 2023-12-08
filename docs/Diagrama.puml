@@ -1,0 +1,134 @@
+@startuml MortalKombat_22310216
+
+class Personaje {
+ +Golpear()
+ +Patear()
+ +MoverIzquierda()
+ +MoverDerecha()
+ +Bloquear()
+ +Saltar()
+ +Caminar()
+}
+
+class Fatality{
+    +Golpear()
+    +Patear()
+
+}
+class Jugador {
+    +Seleccionar()
+    +MoverArriba()
+    +MoverAbajo()
+    +MoverIzquierda()
+    +MoverDerecha()
+}
+
+class Escenario
+
+class Combate{
+    +Seleccionar()
+}
+
+Class Puntuacion{
+    +Aumentar()
+}
+
+Class Tiempo{
+    +Diminuir()
+}
+Class Cinematica{
+    +Avanzar()
+}
+
+Class vsJugador
+
+Class vsCPU
+
+Class Salir{
+    +Cerrar()
+}
+
+Class Vida{
+    +Aumentar()
+    +Disminuir()
+}
+
+class Menu{
+    +Seleccionar()
+    +MoverArriba()
+    +MoverAbajo()
+}
+
+Class Opciones{
+    +Seleccionar()
+}
+
+Class Scorpion
+Class SubZero
+Class Raiden
+Class Baraka
+Class CassieCage
+Class Cetrion
+Class DVorah
+Class ErronBlack
+Class Frostn
+Class Geras
+Class JacquiBriggs
+Class Jade
+Class JaxBriggs
+Class JohnnyCage
+Class Kabal
+Class Kano
+Class Kitana
+Class Kollector
+Class KotalKahn
+Class KungLao
+Class LiuKang
+Class NoobSaibot
+Class Skarlet
+Class SonyaBlade
+
+Jugador o-- Menu
+Menu o-- Opciones
+Opciones *-- Combate
+Opciones *-- Salir
+Combate *-- vsJugador
+Combate *-- vsCPU
+Combate *-- Salir
+Combate o-- Escenario
+Combate o-- Tiempo
+Combate o-- Puntuacion
+Combate o-- Personaje
+Jugador o-- Personaje
+Personaje *-- Vida
+Personaje *-- Cinematica
+Personaje *-- Fatality
+vsCPU o-- Personaje
+vsJugador o-- Personaje
+
+Scorpion --|> Personaje
+SubZero --|> Personaje
+Raiden --|> Personaje
+Baraka --|> Personaje
+CassieCage --|> Personaje
+Cetrion --|> Personaje
+DVorah --|> Personaje
+ErronBlack --|> Personaje
+Frostn --|> Personaje
+Geras --|> Personaje
+JacquiBriggs --|> Personaje
+Jade --|> Personaje
+JaxBriggs --|> Personaje
+JohnnyCage --|> Personaje
+Kabal --|> Personaje
+Kano --|> Personaje
+Kitana --|> Personaje
+Kollector --|> Personaje
+KotalKahn --|> Personaje
+KungLao --|> Personaje
+LiuKang --|> Personaje
+NoobSaibot --|> Personaje
+Skarlet --|> Personaje
+SonyaBlade --|> Personaje
+
+@enduml
